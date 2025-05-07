@@ -18,9 +18,7 @@ $now = date("Y-m-d H:i:s");
 $device = "windows";
 
 if ($device == "windows" || $device == "mac") {
-  echo($device == "windows") ? "使用OSは、windowsです。" : "使用OSは、macです。";
-} else {
-  echo "どちらでもありません。";
+   echo "使用OSは、" . $device . "です。";
 }
 
 // Q5 条件分岐-2 三項演算子
@@ -46,11 +44,12 @@ foreach ($kanto as $todoufuken => $capital) {
 }
 
 // Q9 連想配列-3
-$kanto = ["東京都" => "新宿区","神奈川県" => "横浜市","埼玉県" => "さいたま市","千葉県" => "千葉市","茨城県" => "水戸市","栃木県" => "宇都宮市","群馬県" => "前橋市","三重県" => "津市","沖縄県" => "那覇市"];
+$kanto["三重県"] = "津市";
+$kanto["沖縄県"] = "那覇市";
 
 foreach ($kanto as $todoufuken => $kenncho) {
   if ($todoufuken == "東京都" || $todoufuken == "神奈川県" || $todoufuken == "埼玉県" || $todoufuken == "千葉県" || $todoufuken == "茨城県" || $todoufuken == "栃木県" || $todoufuken == "群馬県") {
-    echo $todoufuken . "の県庁所在地は、" . $city . "です。";
+    echo $todoufuken . "の県庁所在地は、" . $kenncho . "です。";
   } else {
     echo $todoufuken . "は関東地方ではありません。";
   }
